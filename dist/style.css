@@ -1,0 +1,256 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  background-color: rgb(241, 241, 241);
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0px auto;
+}
+
+.header {
+  background-color: cyan;
+  height: 100px;
+  /* box-shadow: 0 0 7px grey; */
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.5);
+}
+
+.header__container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  width: 80px;
+  height: 80px;
+  background: url("https://pbs.twimg.com/profile_images/1099958605925691397/JM1TI2_-_400x400.png") 50%/cover no-repeat;
+}
+
+.logo__title {
+  font-size: 45px;
+}
+
+.currency__select {
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  background-color: cyan;
+  font-size: 25px;
+}
+
+.currency__select:hover {
+  cursor: pointer;
+}
+
+.currency__select option {
+  font-size: 25px;
+  background-color: white;
+}
+
+.form__container {
+  display: flex;
+  justify-content: center;
+}
+
+.form__form {
+  margin: 60px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px 0px rgba(34, 60, 80, 0.35);
+  padding: 20px;
+  background-color: white;
+}
+
+.form__input {
+  width: 500px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 22px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.form__departDate:hover, .form__returnDate:hover{
+  cursor: text;
+}
+
+.form__departDate, .form__returnDate {
+  position: relative;
+}
+
+.form__departDate::before {
+  content: "Туда";
+  position: absolute;
+  left: 140px;
+  color: grey;
+}
+
+.form__returnDate::before {
+  content: "Обратно";
+  position: absolute;
+  left: 140px;
+  color: grey;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 10px 0px;
+}
+
+.buttons__static {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(17, 196, 196);
+}
+
+.buttons__button {
+  position: relative;
+  bottom: 3px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 22px;
+  transition: all 0.1s ease-in 0s;
+}
+
+.buttons__button:hover {
+  cursor: pointer;
+  bottom: 0px;
+  transition: all 0.1s ease-in 0s;
+}
+
+.buttons__submit {
+  background-color: cyan;
+}
+
+.buttons__reset {
+  background-color: cyan;
+}
+
+.main__emptyMessage {
+  width: 550px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  background-color: rgb(209, 209, 209);
+  opacity: 0.7;
+  margin: 0px auto;
+}
+
+.ticket {
+  padding: 15px;
+  padding-top: 0px;
+  box-shadow: 3px 3px 8px 0px rgba(34, 60, 80, 0.35);
+  width: 600px;
+  margin: 0px auto 30px auto;
+  transition: all 0.1s ease-in 0s;
+  background-color: white;
+}
+
+.ticket:hover {
+  transition: all 0.1s ease-in 0s;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.7)
+}
+
+.ticket__header {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 15px; */
+}
+
+.ticket__img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.ticket__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ticket__body {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  text-transform: uppercase;
+  border-bottom: 2px dotted black;
+  margin-bottom: 15px;
+}
+
+.ticket__datePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.datePrice__date {
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.datePrice__price {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.ticket__info {
+  font-weight: 700;
+}
+
+.preloader {
+  height: 7px;
+  background-color: rgb(0, 105, 105);
+  position: absolute;
+  top: 0px;
+  -webkit-animation: loader 1s ease-in 0s infinite;
+          animation: loader 1s ease-in 0s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}

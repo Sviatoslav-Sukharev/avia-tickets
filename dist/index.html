@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link href="./style.css" rel="stylesheet"></head>
+<body>
+
+  <div class="header">
+    <div class="wrapper">
+      <div class="header__container">
+
+        <div class="header__logo">
+          <div class="logo__icon"></div>
+          <h1 class="logo__title">Avia Tickets</h1>
+        </div>
+
+        <div class="header__currency">
+          <select name="currency" class="currency__select">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="form">
+    <div class="wrapper">
+      <div class="form__container">
+
+        <form class="form__form" name="form" autocomplete="off">
+
+          <div>
+            <input class="form__origin form__input" type="text" name="origin" placeholder="Откуда(город,страна)" autocomplete="off">
+          </div>
+
+          <div>
+            <input class="form__destination form__input" type="text" name="destination" placeholder="Куда(город,страна)" autocomplete="off">
+          </div>
+
+          <div>
+            <input class="form__departDate form__input" type="date" name="departDate">
+          </div>
+
+          <div>
+            <input class="form__returnDate form__input" type="date" name="returnDate">
+          </div>
+
+          <div class="form__buttons">
+            <div class="buttons__static">
+              <button class="buttons__submit buttons__button" type="submit">Найти</button>
+            </div>
+            <div class="buttons__static">
+              <button class="buttons__reset buttons__button" type="reset">Сбросить</button>
+            </div>
+          </div>
+          
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="wrapper">
+      <div class="main__container">
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="preloader hidden"></div>
+
+<script type="text/javascript" src="polyfill.b925a679a185a9c84df5.js"></script><script type="text/javascript" src="app.b925a679a185a9c84df5.js"></script></body>
+</html>
