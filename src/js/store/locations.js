@@ -7,6 +7,7 @@ class Location {
     this.cities = null;
     this.airlines = null;
     this.lastSearch = null;
+    this.fullNames = null;
   }
 
   async init() {
@@ -16,6 +17,7 @@ class Location {
     this.countries = this.serializeCountries(countries || {});
     this.cities = this.serializeCities(cities || {});
     this.airlines = this.serializeAirlines(airlines || {});
+    this.fullNames = this.getFullNames();
 
     return response;
   }
@@ -62,6 +64,20 @@ class Location {
   getCityCodeByKey(key) {
     const city = Object.values(this.cities).find((city) => city.fullName === key) || {};
     return city.code;
+  }
+
+  getFullNames() {
+    const fullNames = Object.values(this.cities).map(city => city.fullName);
+    return fullNames;
+  }
+
+  autocompleteInit() {
+    $(".form__origin").autocomplete({
+      source: this.fullNames,
+    });
+    $(".form__destination").autocomplete({
+      source: this.fullNames,
+    });
   }
 
   getCityNameByCode(code) {

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   async function initApp() {
     await locations.init();
+    locations.autocompleteInit();
   }
 
   async function onFormSubmit() {
